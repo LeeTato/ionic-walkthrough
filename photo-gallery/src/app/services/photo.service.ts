@@ -10,7 +10,7 @@ import { Storage } from '@capacitor/storage';
 export class PhotoService {
 
   constructor() { }
-  
+
   public async addNewToGallery() {
     // Take a photo
     const capturedPhoto = await Camera.getPhoto({
@@ -19,4 +19,11 @@ export class PhotoService {
       quality: 100
     });
   }
+
+
+
+}
+export interface UserPhoto {
+  filepath: string;
+  webviewPath: string;
 }
